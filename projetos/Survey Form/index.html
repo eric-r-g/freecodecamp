@@ -3,14 +3,35 @@
 <head>
   <meta charset="utf-8">
   <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1 id="title">Survey Form</h1>
-  <p>A little project of web design</p>
+  <p id="description">A little project of web design</p>
   <form id="survey-form">
-    <label>Enter your name: <input type="text"></label>
-    <label>Enter your e-mail: <input type="email" required></label>
-    <label>Enter a number:<input type="number" ></label>
+    <label id="name-label">Enter your name: <input type="text" id="name" placeholder="Ex: Joshep" required></label>
+    <label id="email-label">Enter your e-mail: <input type="email" id="email" placeholder="Ex: abc123@email.com" required></label>
+    <label id="number-label">Enter a number:<input type="number" id="number" min="1" max="20" placeholder="Ex: 4s"></label>
+    <label id="gender-label">gender
+      <select id="dropdown">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <p>rating us:</p>
+    <label class="inline"><input type="radio" value="rating-1" name="rating" id="rating-1">1</label>
+    <label class="inline"><input type="radio" value="rating-2" name="rating" id="rating-2">2</label>
+    <label class="inline"><input type="radio" value="rating-3" name="rating" id="rating-3">3</label>
+    <label class="inline"><input type="radio" value="rating-4" name="rating" id="rating-4">4</label>
+    <label class="inline"><input type="radio" value="rating-5" name="rating" id="rating-5" checked>5</label>
+    <p>what are your favorite language?:</p>
+    <label>Javascript</script><input type="checkbox" value="favorite-javascript"></label>
+    <label>Python<input type="checkbox" value="favorite-python"></label>
+    <label>C++<input type="checkbox" value="favorite-cpp"></label>
+    <p>Something more you want tell us?</p>
+    <label><textarea></textarea></label>
+    <label><input type="submit" id="submit" value="finish"></label>
   </form>
 </body>
 </html>
