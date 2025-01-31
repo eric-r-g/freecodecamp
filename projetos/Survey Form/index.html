@@ -8,30 +8,74 @@
 <body>
   <h1 id="title">Survey Form</h1>
   <p id="description">A little project of web design</p>
-  <form id="survey-form">
-    <label id="name-label">Enter your name: <input type="text" id="name" placeholder="Ex: Joshep" required></label>
-    <label id="email-label">Enter your e-mail: <input type="email" id="email" placeholder="Ex: abc123@email.com" required></label>
-    <label id="number-label">Enter a number:<input type="number" id="number" min="1" max="20" placeholder="Ex: 4s"></label>
-    <label id="gender-label">gender
-      <select id="dropdown">
-        <option>Male</option>
-        <option>Female</option>
-        <option>Other</option>
-      </select>
-    </label>
-    <p>rating us:</p>
-    <label class="inline"><input type="radio" value="rating-1" name="rating" id="rating-1">1</label>
-    <label class="inline"><input type="radio" value="rating-2" name="rating" id="rating-2">2</label>
-    <label class="inline"><input type="radio" value="rating-3" name="rating" id="rating-3">3</label>
-    <label class="inline"><input type="radio" value="rating-4" name="rating" id="rating-4">4</label>
-    <label class="inline"><input type="radio" value="rating-5" name="rating" id="rating-5" checked>5</label>
-    <p>what are your favorite language?:</p>
-    <label>Javascript</script><input type="checkbox" value="favorite-javascript"></label>
-    <label>Python<input type="checkbox" value="favorite-python"></label>
-    <label>C++<input type="checkbox" value="favorite-cpp"></label>
-    <p>Something more you want tell us?</p>
-    <label><textarea></textarea></label>
-    <label><input type="submit" id="submit" value="finish"></label>
-  </form>
+  <main>
+    <form id="survey-form">
+      <fieldset>
+        <legend>Personal information</legend>
+        <!--Name-->
+        <label for="name" id="name-label">Enter your name: </label>
+        <input type="text" id="name" placeholder="Ex: Joshep" required>
+        
+        <!--Email-->
+        <label for="email" id="email-label">Enter your e-mail: </label>
+        <input type="email" id="email" placeholder="Ex: abc123@email.com" required>
+
+        <!--Number-->
+        <label for="age" id="age-label">Enter your age: </label>
+        <input type="number" id="age" min="1" max="100" placeholder="0">
+
+        <!--Gender-->
+        <label for="dropdown" id="dropdown-label">gender</label>
+        <select id="dropdown" required>
+          <option value="" disabled selected></option>
+          <option value="male">Male</option >
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>General information</legend>
+        <!--Languages-->
+        <p>what are your favorite language:</p>
+        <input type="checkbox" name="language" value="javascript" id="javascript">
+        <label for="javascript">Javascript</label>
+        
+        <input type="checkbox" name="language" value="python" id="python">
+        <label for="python">Python</label>
+
+        <input type="checkbox" name="language" value="cpp" id="cpp">
+        <label for="cpp">C++</label>
+      </fieldset>
+      <fieldset>
+        <legend>Avaliation</legend>
+        <!--Rating-->
+        <p>rating us:</p>
+
+        <input class="inline" type="radio" value="1" name="rating" id="rating-1" required>
+        <label for="rating-1" class="inline">1</label>
+
+        <input class="inline" type="radio" value="2" name="rating" id="rating-2">
+        <label for="rating-2" class="inline">2</label>
+
+        <input class="inline" type="radio" value="3" name="rating" id="rating-3">
+        <label for="rating-3" class="inline">3</label>
+
+        <input class="inline" type="radio" value="4" name="rating" id="rating-4">
+        <label for="rating-4" class="inline">4</label>
+
+        <input class="inline" type="radio" value="5" name="rating" id="rating-5" checked>
+        <label for="rating-5" class="inline">5</label>
+        
+        <!--Comments-->
+        <label for="comments">Something more you want tell us?</label>
+        <textarea rows="4" cols="30" id="comments"></textarea>
+      </fieldset>
+
+      <!--Submit-->
+      <label for="submit"></label>
+      <button type="submit" id="submit">submit</button>
+
+    </form>
+  </main>
 </body>
 </html>
